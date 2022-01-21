@@ -8,6 +8,7 @@ pipeline {
         }
         stage('Build de docker'){
             steps {
+                sh 'cd deploy'
                 sh 'docker build -t web:latest ./deploy/Dockerfile'
             }
         }
